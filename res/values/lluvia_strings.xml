@@ -17,9 +17,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- LLuviaOS Updater -->
     <string name="update_settings_title">LLuviaOS Updater</string>
-    <string name="update_settings_summary">Check for the latest version of the rom</string>
-    <string name="update_package" translatable="false">org.lineageos.updater</string>
-    <string name="update_activity" translatable="false">org.lineageos.updater.UpdatesActivity</string>
+
+    <!-- Tormenta -->
+    <string name="tormenta_title">Tormenta</string>
+    <string name="tormenta_activity_summary">LLuvia's Workshop</string>
 
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the settings category for theme overlays. -->
     <string name="theme_customization_category">Theming</string>

@@ -177,4 +177,7 @@ public class Settings extends SettingsActivity {
     public static class AccountDashboardActivity extends SettingsActivity {}
     public static class SystemDashboardActivity extends SettingsActivity {}
 
+    // LLuvia Settings
+    public static class TormentaSettingsActivity extends SettingsActivity {}
+
 }
