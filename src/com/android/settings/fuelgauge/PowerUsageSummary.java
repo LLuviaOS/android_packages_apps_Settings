@@ -280,6 +280,14 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     }
 
     @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (savedInstanceState != null) {
+            mBatteryLevel = savedInstanceState.getInt(ARG_BATTERY_LEVEL);
+        }
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
         initHeaderPreference();
@@ -317,7 +325,10 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
                     .setIcon(com.android.internal.R.drawable.ic_menu_info_details)
                     .setAlphabeticShortcut('t');
         }
-
+	      MenuItem reset = menu.add(0, MENU_STATS_RESET, 0, R.string.battery_stats_reset)
+                .setIcon(R.drawable.ic_delete)
+                .setAlphabeticShortcut('d');
+        reset.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         menu.add(Menu.NONE, MENU_ADVANCED_BATTERY, Menu.NONE, R.string.advanced_battery_title);
 
         super.onCreateOptionsMenu(menu, inflater);
@@ -331,6 +342,9 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+	          case MENU_STATS_RESET:
+                resetStats();
+                return true;
             case MENU_STATS_TYPE:
                 if (mStatsType == BatteryStats.STATS_SINCE_CHARGED) {
                     mStatsType = BatteryStats.STATS_SINCE_UNPLUGGED;
@@ -450,12 +464,20 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
             batteryView.setPowerSave(mPowerManager.isPowerSaveMode());
             timeText.setText(formatBatteryPercentageText(mBatteryLevel));
         }
+        final BatteryMeterView batteryView = (BatteryMeterView) mBatteryLayoutPref
+                .findViewById(R.id.battery_header_icon);
+        final TextView timeText = (TextView) mBatteryLayoutPref.findViewById(R.id.battery_percent);
+
+        batteryView.setBatteryLevel(mBatteryLevel);
+        batteryView.setPowerSave(mPowerManager.isPowerSaveMode());
+        timeText.setText(formatBatteryPercentageText(mBatteryLevel));
     }
 
     @VisibleForTesting
     void startBatteryHeaderAnimationIfNecessary(BatteryMeterView batteryView, TextView timeTextView,
                 int prevLevel, int currentLevel) {
         if (getContext() != null) {
+            int prevLevel, int currentLevel) {
         mBatteryLevel = currentLevel;
         final int diff = Math.abs(prevLevel - currentLevel);
         if (diff != 0) {
@@ -463,6 +485,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
             animator.setDuration(BATTERY_ANIMATION_DURATION_MS_PER_LEVEL * diff);
             animator.setInterpolator(AnimationUtils.loadInterpolator(getContext(),
             android.R.interpolator.fast_out_slow_in));
+                    android.R.interpolator.fast_out_slow_in));
             animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
@@ -534,6 +557,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         catch (Exception e) {
             return null;
         }
+        return TextUtils.expandTemplate(getContext().getText(R.string.battery_header_title_alternate),
+                NumberFormat.getIntegerInstance().format(batteryLevel));
     }
 
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
