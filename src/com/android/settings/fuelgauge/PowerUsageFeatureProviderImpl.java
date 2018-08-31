@@ -278,6 +278,8 @@ public class PowerUsageFeatureProviderImpl implements PowerUsageFeatureProvider 
             }
             return false;
         }
+        if (cursor == null || !cursor.moveToFirst())
+            return false;
 
         // Check if early warning is available
         boolean earlyWarningAvailable  = cursor.getInt(cursor.getColumnIndex(IS_EARLY_WARNING_COL)) == 1;
