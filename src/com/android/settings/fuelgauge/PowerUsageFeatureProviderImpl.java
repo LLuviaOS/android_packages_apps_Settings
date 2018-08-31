@@ -147,6 +147,7 @@ public class PowerUsageFeatureProviderImpl implements PowerUsageFeatureProvider 
         }
         if (cursor == null || !cursor.moveToFirst())
             return null;
+        }
 
         // Check if estimate is usage based
         int colIndex = cursor.getColumnIndex(BATTERY_ESTIMATE_BASED_ON_USAGE_COL);
@@ -190,6 +191,7 @@ public class PowerUsageFeatureProviderImpl implements PowerUsageFeatureProvider 
         }
         if (cursor == null || !cursor.moveToFirst())
             return null;
+        }
 
         // Get time/battery data indicies
         int timestamp = cursor.getColumnIndex(TIMESTAMP_COL);
@@ -280,6 +282,7 @@ public class PowerUsageFeatureProviderImpl implements PowerUsageFeatureProvider 
         }
         if (cursor == null || !cursor.moveToFirst())
             return false;
+        }
 
         // Check if early warning is available
         boolean earlyWarningAvailable  = cursor.getInt(cursor.getColumnIndex(IS_EARLY_WARNING_COL)) == 1;
