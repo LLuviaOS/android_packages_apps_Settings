@@ -54,4 +54,5 @@ public final class FeatureFactoryImpl extends com.android.settings.overlay.Featu
         }
         return mApplicationFeatureProvider;
     }
+public final class FeatureFactoryImpl extends com.android.settings.overlay.FeatureFactoryImpl {
 }
