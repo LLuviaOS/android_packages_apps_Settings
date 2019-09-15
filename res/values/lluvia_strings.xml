@@ -65,5 +65,6 @@
     <!-- Device Parts -->
     <string name="device_part_title">Device features</string>
     <string name="device_part_summary">Device Speicific Features</string>
-
+    
+    <string name="battery_temp">Battery temperature</string>
 </resources>
