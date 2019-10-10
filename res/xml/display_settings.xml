@@ -144,11 +144,6 @@
         android:title="@string/device_theme"
         android:summary="@string/summary_placeholder" />
 
-    <SwitchPreference
-        android:key="hwui_force_dark"
-        android:title="@string/hwui_force_dark_title"
-        android:summary="@string/hwui_force_dark_summary" />
-
     <Preference
         android:key="vr_display_pref"
         android:title="@string/display_vr_pref_title"
@@ -171,11 +166,10 @@
         settings:keywords="@string/keywords_dark_ui_mode"
         settings:controller="com.android.settings.display.DarkUIPreferenceController"/>
 
-        <SwitchPreference
-            android:key="dark_ui_mode"
-            android:title="@string/dark_ui_mode"
-            settings:keywords="@string/keywords_dark_ui_mode"
-            settings:controller="com.android.settings.display.DarkUIPreferenceController"/>
+    <SwitchPreference
+        android:key="hwui_force_dark"
+        android:title="@string/hwui_force_dark_title"
+        android:summary="@string/hwui_force_dark_summary" />
 
         <ListPreference
             android:key="android.theme.customization.accent_color"
