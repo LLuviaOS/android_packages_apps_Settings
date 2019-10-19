@@ -87,9 +87,6 @@
    <string name="display_cutout_force_fullscreen_title">Full screen apps</string>
    <string name="display_cutout_force_fullscreen_summary">Force apps to ignore notch space</string>
 
-   <!-- Hide gesture navigation bar -->
-   <string name="hide_gesture_navigation_bar_title">Hide gesture navigation bar</string>
-
    <!-- Notification sound timeout -->
     <string name="app_notification_sound_timeout_title">Minimum time between notification sounds</string>
     <string name="app_notification_sound_timeout_summary_template">Allow sounds or vibration no more than once every <xliff:g id="duration">%1$s</xliff:g></string>
@@ -107,3 +104,4 @@
     <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">Close</string>
 </resources>
+
