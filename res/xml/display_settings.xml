@@ -196,7 +196,7 @@
         android:summaryOff="@string/summary_dashboard_suggestions_disabled"
         android:defaultValue="true" />
 
-    <Preference
+    <!--<Preference
         android:key="global_actions"
         android:title="@string/global_actions_title"
         android:summary="@string/global_actions_summary"
@@ -207,5 +207,5 @@
         android:key="advanced_reboot"
         android:title="@string/global_actions_advanced_reboot_title"
         android:summary="@string/global_actions_advanced_reboot_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true" />-->
 </PreferenceScreen>
