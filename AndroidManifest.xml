@@ -3279,7 +3279,7 @@
             android:label="@string/tormenta_settings_title"
             android:icon="@drawable/ic_homepage_tormenta"
             android:parentActivityName="com.android.settings">
-            <intent-filter android:priority="69">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>

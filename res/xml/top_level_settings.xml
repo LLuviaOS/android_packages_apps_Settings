@@ -21,6 +21,15 @@
     android:key="top_level_settings">
 
     <Preference
+        android:key="top_level_tormenta"
+        android:title="@string/tormenta_settings_title"
+        android:summary="@string/tormenta_dashboard_summary"
+        android:icon="@drawable/ic_homepage_tormenta"
+        android:order="-130"
+        android:fragment="com.tormenta.settings.Tormenta"
+        settings:controller="com.tormenta.settings.TopLevelTormentaEntryPreferenceController" />
+
+    <Preference
         android:key="top_level_network"
         android:title="@string/network_dashboard_title"
         android:summary="@string/summary_placeholder"
