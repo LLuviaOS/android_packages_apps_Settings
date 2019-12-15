@@ -69,3 +69,4 @@
 
 # Tormenta
 -keep class com.lluvia.tormenta.**
+-keep class com.google.**
