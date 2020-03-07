@@ -63,6 +63,10 @@
     <string name="touch_sensitivity_title">Increase touch sensitivity</string>
     <string name="keywords_touch_sensitivity">touch, sensitivity, sensitive, screen protector, film, responsive, responsiveness</string>
 
+    <!-- Home handle sizing -->
+    <string name="home_handle_sizer_title">Gesture bar size</string>
+    <string name="home_handle_low_label">Small (AOSP)</string>
+    <string name="home_handle_high_label">Long</string>
 
     <!-- Adaptive Playback -->
     <string name="adaptive_playback_screen_title">Adaptive playback</string>
