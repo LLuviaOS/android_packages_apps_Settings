@@ -22,6 +22,9 @@
     <string name="tormenta_title">Tormenta</string>
     <string name="tormenta_activity_summary">LLuvia's Workshop</string>
 
+    <!-- Summary text for system preference tile, showing important setting items under system setting [CHAR LIMIT=NONE]-->
+    <string name="system_dashboard_custom_summary">Languages, updater, time, backup</string>
+
     <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">Close</string>
 
