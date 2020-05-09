@@ -25,6 +25,9 @@
     <string name="battery_stats_reset">Reset stats</string>
     <string name="battery_stats_message">Battery history stats are going to be reset</string>
 
+    <!-- LLuviaOS Version -->
+    <string name="lluvia_version">LLuviaOS Version</string>
+
     <!-- Screenshot shutter -->
     <string name="screenshot_shutter_sound_title">Screenshot shutter sound</string>
 

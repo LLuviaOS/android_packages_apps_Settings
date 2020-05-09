@@ -45,6 +45,14 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.MainlineModuleVersionPreferenceController"/>
 
+    <!-- LLuviaOS Version -->
+    <Preference
+        android:key="lluvia_version"
+        android:title="@string/lluvia_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.LLuviaVersionPreferenceController"/>
+
     <!-- Baseband -->
     <Preference
         android:key="base_band"
