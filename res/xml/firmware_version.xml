@@ -22,6 +22,11 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- LLuvia Logo Header -->
+    <Preference
+        android:key="ll_logo"
+        android:layout="@layout/lluvia_logo" />
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
