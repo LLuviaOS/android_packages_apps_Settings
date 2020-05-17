@@ -40,7 +40,7 @@ public class VolumeSkipTrackSettings extends DashboardFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.OWLSNEST;
+        return MetricsProto.MetricsEvent.TORMENTA;
     }
 
     @Override
